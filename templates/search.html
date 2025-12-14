@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Search</h1>
+
+<form method="get" action="/search">
+  <input
+    type="text"
+    name="q"
+    value="{{ query }}"
+    placeholder="Search products"
+    autofocus
+  >
+  <button type="submit">Search</button>
+</form>
+
+<hr>
+
+{% if query %}
+  <h2>Results for "{{ query }}"</h2>
+
+  {% if results %}
+    <ul>
+      {% for p in results %}
+        <li>
+          <a href="/product/{{ p.id }}" data-prefetch>
+            {{ p.name }} — ₹{{ p.price }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %}
+{% endif %}
+{% endblock %}

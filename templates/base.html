@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini McMaster</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <script src="/static/js/prefetch.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="/" data-prefetch>Home</a>
+    <form action="/search" method="get" style="display:inline;">
+    <input
+      type="text"
+      name="q"
+      placeholder="Search"
+      size="20"
+    >
+    </form>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

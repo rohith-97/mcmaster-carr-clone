@@ -1,0 +1,26 @@
+{
+  "categories": {
+    "fasteners": [
+      {
+        "id": "bolt-001",
+        "name": "Hex Bolt M6",
+        "price": 12,
+        "keywords": "hex bolt m6 fastener steel"
+      },
+      {
+        "id": "nut-001",
+        "name": "Hex Nut M6",
+        "price": 4,
+        "keywords": "hex nut m6 fastener"
+      }
+    ],
+    "tools": [
+      {
+        "id": "hammer-001",
+        "name": "Steel Hammer",
+        "price": 350,
+        "keywords": "hammer steel tool"
+      }
+    ]
+  }
+}

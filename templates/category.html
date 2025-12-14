@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ category }}</h1>
+
+<ul>
+  {% for p in products %}
+    <li>
+      <a href="/product/{{ p.id }}" data-prefetch>
+        {{ p.name }} — ₹{{ p.price }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Categories</h1>
+<ul>
+  {% for c in categories %}
+    <li>
+      <a href="/category/{{ c }}" data-prefetch>{{ c }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
